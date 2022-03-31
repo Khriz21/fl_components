@@ -1,4 +1,7 @@
+import 'package:fl_components/widgets/custom_card_image.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/widgets.dart';
 
 class CardScreen extends StatelessWidget {
   const CardScreen({Key? key}) : super(key: key);
@@ -9,8 +12,19 @@ class CardScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Tarjetas'),
       ),
-      body: const Center(
-        child: Text('CardScreen'),
+      body: ListView(
+        children: <Widget>[
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            child: Column(
+              children: const <Widget>[
+                CustomCard(),
+                CustomCardImage(),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class ListView1Screen extends StatelessWidget {
@@ -15,6 +16,9 @@ class ListView1Screen extends StatelessWidget {
       'Super Mario Bros. 3',
       'Super Mario World',
       'Super Mario World 2: Yoshi\'s Island',
+      'god of ward',
+      'meta slug 2',
+      'spiderman',
     ];
     return Scaffold(
         appBar: AppBar(
@@ -28,7 +32,10 @@ class ListView1Screen extends StatelessWidget {
                     child: ListTile(
                       //leading: const Icon(Icons.ac_unit),
                       title: Text(game),
-                      trailing: const Icon(Icons.keyboard_arrow_right),
+                      trailing: const Icon(
+                        Icons.keyboard_arrow_right,
+                        color: AppTheme.primary,
+                      ),
                     ),
                   ),
                 )

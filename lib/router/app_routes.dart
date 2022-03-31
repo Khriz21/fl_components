@@ -20,7 +20,7 @@ class AppRoutes {
     MenuOptions(
         screen: const ListView1Screen(),
         route: '/listView1',
-        icon: Icons.list_sharp,
+        icon: Icons.library_books_rounded,
         name: 'Lista de tipo 1'),
     MenuOptions(
         screen: const ListView2Screen(),
@@ -33,16 +33,22 @@ class AppRoutes {
         icon: Icons.credit_card,
         screen: const CardScreen()),
     MenuOptions(
+        name: 'Tarjetas con imagen',
+        route: '/cartd2',
+        icon: Icons.image,
+        screen: const CardType2Screen()),
+    MenuOptions(
         name: 'Alertas',
         route: '/alert',
         icon: Icons.warning_amber_rounded,
         screen: const AlertScreen()),
   ];
 
-  // ?Metodo que me devuelve una lista de rutas dinámicas
+  // ?Metodo que me devuelve una lista de rutas automaticamente
   static Map<String, Widget Function(BuildContext)> geAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
 
+    // ?Recorro la lista de rutas
     for (final option in menuOptions) {
       appRoutes.addAll({option.route: (context) => option.screen});
     }
