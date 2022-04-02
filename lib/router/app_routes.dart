@@ -13,11 +13,6 @@ class AppRoutes {
     // *TODO: Borar el /home
 
     MenuOptions(
-        screen: const HomeScreen(),
-        route: 'home',
-        icon: Icons.home_rounded,
-        name: 'Menu de inicio'),
-    MenuOptions(
         screen: const ListView1Screen(),
         route: '/listView1',
         icon: Icons.library_books_rounded,
@@ -28,25 +23,47 @@ class AppRoutes {
         icon: Icons.list_alt,
         name: 'Lista de tipo 2'),
     MenuOptions(
-        name: 'Tarjetas',
-        route: '/card',
-        icon: Icons.credit_card,
-        screen: const CardScreen()),
+      name: 'Tarjetas',
+      route: '/card',
+      icon: Icons.credit_card,
+      screen: const CardScreen(),
+    ),
     MenuOptions(
-        name: 'Tarjetas con imagen',
-        route: '/cartd2',
-        icon: Icons.image,
-        screen: const CardType2Screen()),
+      name: 'Tarjetas con imagen',
+      route: '/cartd2',
+      icon: Icons.image,
+      screen: const CardType2Screen(),
+    ),
     MenuOptions(
-        name: 'Alertas',
-        route: '/alert',
-        icon: Icons.warning_amber_rounded,
-        screen: const AlertScreen()),
+      name: 'Alertas',
+      route: '/alerts',
+      icon: Icons.add_alert_sharp,
+      screen: const AlertScreen(),
+    ),
+    MenuOptions(
+      name: 'Animated Container',
+      route: '/animatedContainer',
+      icon: Icons.play_circle_outline_outlined,
+      screen: const AnimateScreen(),
+    ),
+    MenuOptions(
+      name: 'Cirle Avatar',
+      route: '/circleAvatar',
+      icon: Icons.account_circle,
+      screen: const CircleAvatarScreen(),
+    ),
+    MenuOptions(
+      name: 'Alerta de ruta',
+      route: '/alert',
+      icon: Icons.warning_amber_rounded,
+      screen: const AlertRouteScreen(),
+    ),
   ];
 
   // ?Metodo que me devuelve una lista de rutas automaticamente
   static Map<String, Widget Function(BuildContext)> geAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
+    appRoutes.addAll({'home': (context) => const HomeScreen()});
 
     // ?Recorro la lista de rutas
     for (final option in menuOptions) {
