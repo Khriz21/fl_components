@@ -10,7 +10,6 @@ class AppRoutes {
   // ?Lista de rutas
   static final menuOptions = <MenuOptions>[
     // ignore: todo
-    // *TODO: Borar el /home
 
     MenuOptions(
         screen: const ListView1Screen(),
@@ -28,12 +27,12 @@ class AppRoutes {
       icon: Icons.credit_card,
       screen: const CardScreen(),
     ),
-    MenuOptions(
+    /* MenuOptions(
       name: 'Tarjetas con imagen',
       route: '/cartd2',
       icon: Icons.image,
       screen: const CardType2Screen(),
-    ),
+    ), */
     MenuOptions(
       name: 'Alertas',
       route: '/alerts',
@@ -41,27 +40,33 @@ class AppRoutes {
       screen: const AlertScreen(),
     ),
     MenuOptions(
-      name: 'Animated Container',
+      name: 'Contenedor animado',
       route: '/animatedContainer',
       icon: Icons.play_circle_outline_outlined,
       screen: const AnimateScreen(),
     ),
     MenuOptions(
-      name: 'Cirle Avatar',
+      name: 'Circulo Avatar',
       route: '/circleAvatar',
       icon: Icons.account_circle,
       screen: const CircleAvatarScreen(),
     ),
     MenuOptions(
-      name: 'Alerta de ruta',
-      route: '/alert',
-      icon: Icons.warning_amber_rounded,
-      screen: const AlertRouteScreen(),
+      name: 'Pantalla de entradas',
+      route: '/inputs',
+      icon: Icons.input_rounded,
+      screen: const InputsScreen(),
+    ),
+    MenuOptions(
+      name: 'Pantalla deslizador',
+      route: '/slider',
+      icon: Icons.slideshow_rounded,
+      screen: const SliderScreen(),
     ),
   ];
 
   // ?Metodo que me devuelve una lista de rutas automaticamente
-  static Map<String, Widget Function(BuildContext)> geAppRoutes() {
+  static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
     appRoutes.addAll({'home': (context) => const HomeScreen()});
 

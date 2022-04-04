@@ -7,5 +7,6 @@ export 'package:fl_components/screens/card_screen.dart';
 export 'package:fl_components/screens/card_type_2_screen.dart';
 export 'package:fl_components/screens/alert_screen.dart';
 export 'package:fl_components/screens/circle_avatar.dart';
-
 export 'package:fl_components/screens/animate_screen.dart';
+export 'package:fl_components/screens/inputs_screen.dart';
+export 'package:fl_components/screens/slider_screen.dart';
