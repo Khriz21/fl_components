@@ -81,12 +81,12 @@ class InputsScreen extends StatelessWidget {
                         FocusNode(),
                       );
                       if (!myFormKey.currentState!.validate()) {
-                        print('Formulario incompleto');
+                        //print('Formulario incompleto');
                         return;
                       }
 
                       // *Imprimir los valores del formulario
-                      print(formValues);
+                      //print(formValues);
                     },
                     child: const Text('Guardar'),
                   ),

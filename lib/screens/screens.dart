@@ -10,3 +10,5 @@ export 'package:fl_components/screens/circle_avatar.dart';
 export 'package:fl_components/screens/animate_screen.dart';
 export 'package:fl_components/screens/inputs_screen.dart';
 export 'package:fl_components/screens/slider_screen.dart';
+
+export 'package:fl_components/screens/list_view_builder_screen.dart';

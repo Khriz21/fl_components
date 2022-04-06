@@ -13,12 +13,12 @@ class AppRoutes {
 
     MenuOptions(
         screen: const ListView1Screen(),
-        route: '/listView1',
+        route: '/list_view1',
         icon: Icons.library_books_rounded,
         name: 'Lista de tipo 1'),
     MenuOptions(
         screen: const ListView2Screen(),
-        route: '/listView2',
+        route: '/list_view2',
         icon: Icons.list_alt,
         name: 'Lista de tipo 2'),
     MenuOptions(
@@ -41,13 +41,13 @@ class AppRoutes {
     ),
     MenuOptions(
       name: 'Contenedor animado',
-      route: '/animatedContainer',
+      route: '/animated_container',
       icon: Icons.play_circle_outline_outlined,
       screen: const AnimateScreen(),
     ),
     MenuOptions(
       name: 'Circulo Avatar',
-      route: '/circleAvatar',
+      route: '/circle_avatar',
       icon: Icons.account_circle,
       screen: const CircleAvatarScreen(),
     ),
@@ -62,6 +62,12 @@ class AppRoutes {
       route: '/slider',
       icon: Icons.slideshow_rounded,
       screen: const SliderScreen(),
+    ),
+    MenuOptions(
+      name: 'Lista de imagenes',
+      route: '/list_builder',
+      icon: Icons.image,
+      screen: const ListViewBuilderScreen(),
     ),
   ];
 
